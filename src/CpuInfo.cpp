@@ -163,7 +163,7 @@ void CpuInfo::init()
   // sizes and cache sharing of each CPU core.
   for (std::size_t i = 0; i < bytes; i += info->Size)
   {
-    info = (SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX*) &buffer[i];
+    info = (SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX*) &buffer.at(i);
 
     if (info->Relationship == RelationCache &&
         info->Cache.Level >= 1 &&
