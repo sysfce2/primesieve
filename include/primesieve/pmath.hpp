@@ -2,7 +2,7 @@
 /// @file   pmath.hpp
 /// @brief  Auxiliary math functions for primesieve.
 ///
-/// Copyright (C) 2022 Kim Walisch, <kim.walisch@gmail.com>
+/// Copyright (C) 2026 Kim Walisch, <kim.walisch@gmail.com>
 ///
 /// This file is distributed under the BSD License. See the COPYING
 /// file in the top level directory.
@@ -26,7 +26,7 @@
   #define __has_builtin(x) 0
 #endif
 
-namespace {
+namespace primesieve {
 
 template <typename X, typename Y>
 inline X ceilDiv(X x, Y y)
