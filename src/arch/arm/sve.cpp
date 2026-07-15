@@ -102,10 +102,7 @@ bool has_arm_sve()
     // GCC and Clang, we only try them as a fallback option if
     // none of the other more reliable methods work.
     __builtin_cpu_init();
-    if (__builtin_cpu_supports("sve"))
-      return true;
-    else
-      return false;
+    return (__builtin_cpu_supports("sve") > 0);
   }();
 
   return cached;
